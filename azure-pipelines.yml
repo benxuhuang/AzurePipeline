@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -16,11 +17,12 @@ steps:
     azureResourceManagerConnection: '免費試用版(c598e038-deed-49f3-bbbe-a9bcfd56ea1f)'
     subscriptionId: 'c598e038-deed-49f3-bbbe-a9bcfd56ea1f'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'myResourceGroup'
+    resourceGroupName: 'AzurePipelineRG'
     location: 'East Asia'
     templateLocation: 'Linked artifact'
-    csmFile: 'azuredeploy.json'
-    csmParametersFile: 'azuredeploy.parameters.prod.json'
+    csmFile: 'CreateWebApp/azuredeploy.json'
+    overrideParameters: |
+      -projectName AzurePipeline
+      -linkedTemplateUri https://raw.githubusercontent.com/benxuhuang/AzurePipeline/master/CreateWebApp/linkedStorageAccount.json
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
-    displayName: 'Azure Resource Manager'
