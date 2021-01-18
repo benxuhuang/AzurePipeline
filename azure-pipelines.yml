@@ -19,9 +19,8 @@ steps:
     resourceGroupName: 'myResourceGroup'
     location: 'East Asia'
     templateLocation: 'Linked artifact'
-    csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: |
-      -projectName AzurePipeline
-      -linkedTemplateUri https://raw.githubusercontent.com/benxuhuang/AzurePipeline/master/CreateWebApp/linkedStorageAccount.json
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.prod.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
+    displayName: 'Azure Resource Manager'
