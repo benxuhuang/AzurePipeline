@@ -4,7 +4,7 @@
     "parameters": {
       "projectName": {
         "type": "string",
-        "defaultValue": "autodeploywebapp",
+        "defaultValue": "azpipeline",
         "minLength": 3,
         "maxLength": 25,
         "metadata": {
