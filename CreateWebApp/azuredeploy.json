@@ -4,6 +4,7 @@
     "parameters": {
       "projectName": {
         "type": "string",
+        "defaultValue": "autodeploywebapp",
         "minLength": 3,
         "maxLength": 11,
         "metadata": {
@@ -26,6 +27,7 @@
       },
       "linkedTemplateUri": {
         "type": "string",
+        "defaultValue": "https://raw.githubusercontent.com/benxuhuang/AzurePipeline/master/CreateWebApp/linkedStorageAccount.json",
         "metadata": {
           "description": "The Uri of the linked template."
         }
